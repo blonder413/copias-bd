@@ -125,4 +125,23 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
+
+    /**
+     * Lista las copias generadas
+     */
+    public function actionListarcopias($id)
+    {
+        switch ($id) {
+            case 1:
+                $thefolder = "/home/blonder413/public_html/sql/blog/";
+                break;
+            case 2:
+                $thefolder = "/home/blonder413/public_html/sql/gastos/";
+                break;
+            default:
+                break;
+        }
+
+        return $this->render('listarcopias', ['thefolder' => $thefolder]);
+    }
 }
