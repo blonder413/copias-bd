@@ -129,7 +129,7 @@ class SiteController extends Controller
     /**
      * Lista las copias generadas
      */
-    public function actionListarcopias($id)
+    public function actionListar($id)
     {
         switch ($id) {
             case 1:
@@ -142,6 +142,6 @@ class SiteController extends Controller
                 break;
         }
 
-        return $this->render('listarcopias', ['thefolder' => $thefolder]);
+        return $this->render('listar', ['thefolder' => $thefolder]);
     }
 }

@@ -18,7 +18,7 @@ $this->title = 'Sistema de Información de Copias de Seguridad';
                     ]) ?>
                 </p>
                 <p>
-                    <?= Html::a('<i class="fa fa-university" aria-hidden="true"></i>Listar copias Blog', ['/site/listarcopias/1'], [
+                    <?= Html::a('<i class="fa fa-university" aria-hidden="true"></i>Listar copias Blog', ['/site/listar/1'], [
                         'class' => 'btn btn-lg btn-info',
                         'target' => '_blank'
                     ]);

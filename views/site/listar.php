@@ -3,7 +3,7 @@
 
 use yii\helpers\Html;
 
-$this->title = 'Listar Copias de Seguridad';
+$this->title = 'Copias de Seguridad de App';
 switch ($_GET['id']) {
     case 1:
         $this->title .= ' Blog';
