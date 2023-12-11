@@ -144,4 +144,20 @@ class SiteController extends Controller
 
         return $this->render('listar', ['thefolder' => $thefolder]);
     }
+
+    /**
+     * Crear copia de seguridad de app blog
+     */
+    public function actionBlog()
+    {
+        $ruta = Yii::$app->basePath . '/sh/backup.sh';
+        exec("sh $ruta 2>&1", $a);
+        if ($a[0] === 'blogyii2') {
+            Yii::$app->session->setFlash('success', "La Copia de Seguridad $a[0] se ha Realizado Correctamente");
+        } else {
+            Yii::$app->session->setFlash('danger', "La Copia de Seguridad NO se ha Realizado Correctamente");
+        }
+
+        return $this->redirect(['index']);
+    }
 }
